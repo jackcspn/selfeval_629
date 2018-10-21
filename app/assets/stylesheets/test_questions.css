@@ -1,0 +1,72 @@
+
+
+table#review {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+table#review th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: #D3D3D3;
+  text-align: center;
+  vertical-align:middle;
+}
+
+table#review th#true {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: #FFFC53;
+  text-align: center;
+  vertical-align:middle;
+}
+
+table#review th#false {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: #5B7BFB;
+  text-align: center;
+  vertical-align:middle;
+}
+
+#summa:link, #summa:visited {
+    background-color: blue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+#summa:hover, #summa:active {
+    background-color: red;
+}
+
+#done:link, #done:visited {
+    background-color: blue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+#done:hover, #done:active {
+    background-color: red;
+}
+
+
+input[type='radio'] {
+  width:4em;
+  height:4em;
+ }
+ 
+ input[type="checkbox"] {
+  width:6em;
+  height:6em;
+ }
+ yellow {
+   color: #999900;
+ }

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Questions</h1>
+<br>
+<strong id="new_question"><%= link_to 'New Question', new_question_path %></strong>
+<br>
+<br>
+<table>
+  <tbody>
+    <% i=1 %>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><strong><%= i %>.) Content:<%= question.content %></strong></td>
+      </tr>
+      <tr>
+        <td><strong>Option 1: </strong><%= question.option1 %></td>
+      </tr>
+      <tr>
+        <td><strong>Option 2: </strong><%= question.option2 %></td>
+      </tr>
+      <tr>
+        <td><strong>Option 3: </strong><%= question.option3 %></td>
+      </tr>
+      <tr>
+        <td><strong>Option 4: </strong><%= question.option4 %></td>
+      </tr>
+      <tr>
+        <td><strong>Answer: </strong><%= question.answer %></td>
+      </tr>
+      <tr>
+        <td><strong>Explanation: </strong><%= question.explanation %></td>
+      </tr>
+      <tr>
+        <td><strong>Topic: </strong><%= question.topic %></td>
+      </tr>
+      <tr>
+        <td>
+          <table>
+            <tr>
+               <td><strong id="show"><%= link_to 'Show', question %></strong></td>
+               <td><strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong></td>
+               <td><strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <% i=i+1 %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/javascript">if (window.MathJax) { MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}</script>

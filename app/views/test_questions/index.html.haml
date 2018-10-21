@@ -1,0 +1,97 @@
+= form_tag test_questions_path, :id => 'test_form', :method => 'get' do
+  - if @show_resume == true
+    = link_to "Resume last saved test" , {:controller => "test_questions" , :action => "resume" }, :id => 'summa'
+  - if @OK != "clicked" && @review != "clicked" && @submitted != "true"
+    %h1 Select the Topics
+    - @selected_topics.each do |topic, val|
+      %input{:type => 'radio',:value => "selected", :name => "selected_topics[#{topic}]",:checked => @selected_topics[topic] == 'selected', :id => "#{topic}" }= topic
+    %input{:type => 'radio', :value => "selected", :name => "all_topics", :checked => @all_topics == 'selected'} All Topics
+    %br
+    %br
+    %button{:value => "clicked", :name => "ok", @OK => 'clicked' } OK
+  %br 
+  -if @OK == "clicked" || @review == "clicked" || @submitted == "true"
+    %p Your Selected Topics
+    - @selected_topics.each do |topic, val|
+      -if val == "selected"
+        %input{:type => 'radio',:value => "selected", :name => "selected_topics[#{topic}]",:checked => @selected_topics[topic] == 'selected', :id => "#{topic}" }= topic
+    - j = 0
+    
+    %table#review
+      %thead
+        %tr
+          - @questions.each_with_index do |question, index|
+            - if @selected_topics[question.topic] == "selected"
+              - j += 1
+              - if @mark[question.id] == "marked"
+                %th#true= j
+              - elsif @mark[question.id] == "answered"
+                %th#false= j
+              - else
+                %th= j
+    %br
+    
+    %h2 TAKE TEST 
+    
+    
+    -i = 0
+    - if 1
+      - @questions.each_with_index do |question, index|
+        -if @selected_topics[question.topic] == "selected" 
+          -i+=1
+          = "#{i}."
+          = question.content
+          %br
+          %br
+          - if question.image_url.present?
+            = image_tag(question.image_url(:thumb).to_s, :align=>"left") 
+            - 22.times do
+              %br
+          %br
+          #content_q
+            - if  question.option1 != "nil"
+              %input{:type => 'radio', :value => "option1", :name => "answers[#{question.id}]", :checked => @answers[question.id] == 'option1'}= question.option1
+              %br
+            - if  question.option2 != "nil"
+              %input{:type => 'radio', :value => "option2", :name => "answers[#{question.id}]", :checked => @answers[question.id] == 'option2'}= question.option2
+              %br
+            - if  question.option3 != "nil"
+              %input{:type => 'radio', :value => "option3", :name => "answers[#{question.id}]", :checked => @answers[question.id] == 'option3'}= question.option3
+              %br
+            - if  question.option4 != "nil"
+              %input{:type => 'radio', :value => "option4", :name => "answers[#{question.id}]", :checked => @answers[question.id] == 'option4'}= question.option4
+              %br
+            %br
+          %input{:type => 'checkbox',:value => "marked", :name => "mark[#{question.id}]", :checked => @mark[question.id] == 'marked'} 
+            %yellow mark
+          %br
+          %br
+          - if @submitted == "true"
+            #content
+              The correct answer is
+              %strong
+                = question[question.answer]
+              - if question[@answers[question.id]] != nil
+                and you selected
+                %strong
+                  = question[@answers[question.id]]
+              - if question[@answers[question.id]] != nil
+                so it was
+                %i
+                = @correctness[question.id]
+          %br
+        %br
+    - if @submitted != 'true'
+      %button{:value => "clicked", :name => "review", @review => 'clicked' } Review All/Save Test
+    - if @review == 'clicked' && @submitted != 'true'
+      %button{:value => 'true', :name => "submitted", @submitted => 'true'}Submit All
+    - if @submitted == 'true'
+      = link_to "Summary" , {:controller => "test_questions", :action => "summary", :count => @count, :selected_topics => @selected_topics, :answers => @answers, :total => "#{j}"}, :id => 'summa'
+    %br
+    %br
+    %br
+    - if @review == 'clicked'
+      = link_to "Save and log out" , {:controller => "test_questions", :action => "signoutwpause", :count => @count, :mark => @mark, :correctness => @correctness, :answers => @answers, :selected_topics => @selected_topics, :all_topics => @all_topics}, :id => 'summa'
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type="text/javascript">if (window.MathJax) { MathJax.Hub.Queue(["Typeset",MathJax.Hub]);}</script>

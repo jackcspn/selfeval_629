@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "CS 629 Self Evaluation System" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise Roles" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!--<p>pages ppppppppppppppppppppp</p>-->
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+  <!--  <title>HelloApp</title>-->
+  <!--  <)%= csrf_meta_tags %>-->
+
+  <!--  <)%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>-->
+  <!--  <)%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>-->
+  <!--</head>-->
+
+  <!--<body>-->
+  <!--  <)%= yield %>-->
+  </body>
+</html>
