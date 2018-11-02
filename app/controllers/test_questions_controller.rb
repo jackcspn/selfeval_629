@@ -3,7 +3,8 @@ class TestQuestionsController < ApplicationController
   
   def index
     @show_resume = false
-    @questions = Question.all
+    # @questions = Question.all
+    @questions = Question.where(display: [true, nil])
     @OK = params[:ok]
     @correctness = Hash[@questions.map {|question| [question.id, ""]}]
     @answers = Hash[@questions.map {|question| [question.id, "blank"]}]

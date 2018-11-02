@@ -21,6 +21,18 @@
   <strong>Qtype:</strong>
   <%= @question.qtype %>
 </p>
+<p>
+  <strong>Approved:</strong>
+  <%= "Yes" if @question.display==true %><%= "No" if @question.display==false %>
+</p>
+
+
+<% if current_user.admin? %>
+  <p>
+    <strong>User_id:</strong>
+    <%= @question.uid %>
+  </p>
+<% end %>
 
 <p>
   <strong>Option1:</strong>
@@ -57,6 +69,7 @@
   <%= @question.topic %>
 </p>
 
-
-<u><strong><%= link_to 'Edit', edit_question_path(@question) %></strong></u>
+<% if current_user.admin? %>
+  <u><strong><%= link_to 'Edit', edit_question_path(@question) %></strong></u>
+<% end %>
 <u><strong><%= link_to 'Back', questions_path %></strong></u>
