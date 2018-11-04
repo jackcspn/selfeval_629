@@ -6496,3 +6496,1597 @@ Processing by QuestionsController#new as HTML
 Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.2ms)
 
 
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/original/v3/selfeval/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 165.91.12.245 at 2018-11-04 19:45:04 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (315.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (3.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 523ms (Views: 490.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 19:45:07 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 19:45:18 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (20.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 70.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 19:45:54 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 85.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5Bcsfsz%5D=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 19:46:02 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"csfsz"=>"selected"}, "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 19:46:27 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5Bdfgda%5D=selected&selected_topics%5Btdtd%5D=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 19:46:56 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"dfgda"=>"selected", "tdtd"=>"selected"}, "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (25.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5Bdfgda%5D=selected&selected_topics%5Btdtd%5D=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 19:47:07 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"dfgda"=>"selected", "tdtd"=>"selected"}, "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (28.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5Bdfgda%5D=selected&selected_topics%5Btdtd%5D=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 19:47:12 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"dfgda"=>"selected", "tdtd"=>"selected"}, "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (21.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5Bdfgda%5D=selected&selected_topics%5Btdtd%5D=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 19:47:25 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"dfgda"=>"selected", "tdtd"=>"selected"}, "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 19:47:41 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 19:47:57 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 19:48:00 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 19:48:04 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for 165.91.12.245 at 2018-11-04 19:48:05 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (26.6ms)
+  Rendered questions/new.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/new" for 165.91.12.245 at 2018-11-04 19:56:36 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (9.7ms)
+  Rendered questions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 19:57:33 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (19.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 71.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 19:59:28 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for 165.91.12.245 at 2018-11-04 19:59:48 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.9ms)
+  Rendered questions/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questions" for 165.91.12.245 at 2018-11-04 20:04:22 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D+CklSLx1rhrUs7R9Wflx8mM2XcqacSZ1nTnFYGCmcXqSMCDVKOh02muQudIc4wXndbcBEnRrJ1T7S2EG/B+4Q==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"Dynamic Programming", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems \\(a^2\\)", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Create Question"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "questions" ("content", "option1", "option2", "option3", "option4", "answer", "qtype", "explanation", "topic", "display", "uid") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["content", "Which of the following is/are property/properties of a dynamic programming problem?"], ["option1", "Optimal substructure"], ["option2", "Overlapping subproblems"], ["option3", "Greedy approach"], ["option4", "Both optimal substructure and overlapping subproblems \\(a^2\\)"], ["answer", "option4"], ["qtype", "Multiple Choice"], ["explanation", "A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties."], ["topic", "Dynamic Programming"], ["display", "t"], ["uid", 1]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 17ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:04:23 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:04:27 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/9/edit" for 165.91.12.245 at 2018-11-04 20:04:39 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.2ms)
+  Rendered questions/edit.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/9" for 165.91.12.245 at 2018-11-04 20:04:48 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x1qSF/aG9a0a9Ii9hWpnetv3Ewu7RxtXJVEXbCKUsygVztrDMSHzMhVLiugMpLTzAqaXHU5ao/t1+b5WkmGo5w==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"No", "topic"=>"General", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "option4" = ?, "display" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["option4", "Both optimal substructure and overlapping subproblems"], ["display", "f"], ["feedback", ""], ["id", 9]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 15ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:04:48 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:04:51 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:04:55 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:04:59 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:00 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (15.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:05:03 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 460ms (Views: 416.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/questions/9/edit" for 165.91.12.245 at 2018-11-04 20:05:08 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (17.7ms)
+  Rendered questions/edit.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (10.0ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/questions/9" for 165.91.12.245 at 2018-11-04 20:05:14 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/kKBJEUYJXaPvimkPfXOlxMGRsI6ByNrFdPUFBKucV9bULQVrNmCtWB+vMZOQSzhR2dDf31pCH8/+Zq4L+iCg==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"General", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"9"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "questions" SET "display" = ? WHERE "questions"."id" = ?[0m  [["display", "t"], ["id", 9]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 18ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:05:14 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:05:19 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:23 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (20.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 72.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:26 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:05:29 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:05:32 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:42 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 67.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:46 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 71.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:49 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 71.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:05:50 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:05:51 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (25.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 79.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 165.91.12.245 at 2018-11-04 20:05:54 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vqq7qJKyW0Yb/qliwU/8OmDhGzKb+Q02BOt58MYGD+Gfn1zs+bhd8ols2D3myFlvHuW2cvUkQcRdde2ck71lgg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:05:54 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:05:57 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:06:03 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ZRjRFDkDOzpdGIg8h2JX2U1Oe+47v5r8GiVrFIabNxPYLK1afDdVmOGyMiUGrUx53YzJKbjcfvKAlDGnhyFHg==", "user"=>{"email"=>"liyicheng199506@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liyicheng199506@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-11-04 20:06:03.199918"], ["last_sign_in_at", "2018-11-02 19:03:15.204479"], ["current_sign_in_ip", "165.91.12.245"], ["sign_in_count", 6], ["updated_at", "2018-11-04 20:06:03.201154"], ["id", 2]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 171ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:06:03 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:06:06 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 2]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 64.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:06:12 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."uid" = ?[0m  [["uid", 2]]
+  Rendered questions/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 165.91.12.245 at 2018-11-04 20:06:16 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cdURddCV+wYKU6P7bb31lnukTsYN/mBe4YLOdfEp9zlOA1K7m9pS1QnxCzv0Lg8bFgXJ7m2UGj8NN5pwoePwUw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:06:16 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:06:19 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:06:23 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XyHQhcL/al1L6UkrXlN1bR46VonUomcjt0yclC16FKIDzQlQKtGX4yDxg/rdH3HsiGjKde5XKS8HudaaQ1sqHw==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-11-04 20:06:23.570533"], ["last_sign_in_at", "2018-11-02 19:04:24.652318"], ["current_sign_in_ip", "165.91.12.245"], ["sign_in_count", 8], ["updated_at", "2018-11-04 20:06:23.571553"], ["id", 1]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 169ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:06:23 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:06:26 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/1/edit" for 165.91.12.245 at 2018-11-04 20:06:34 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.5ms)
+  Rendered questions/edit.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/1" for 165.91.12.245 at 2018-11-04 20:06:42 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J1BuOskyBYd4cnC/Z0PgfOjQkomAY871oTygGjPUUthY1mD41W1fG6ID0Fgd6pddrxBqB3m0FQPb09ZYwWmF/w==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"General", "content"=>"What color is the sky?", "option1"=>"red", "option2"=>"green", "option3"=>"blue", "option4"=>"yellow", "answer"=>"option3", "explanation"=>"It is always blue unless you pollute it.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "t"], ["feedback", ""], ["id", 1]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/1
+Completed 302 Found in 15ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/questions/1" for 165.91.12.245 at 2018-11-04 20:06:42 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:06:44 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/2/edit" for 165.91.12.245 at 2018-11-04 20:06:49 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (7.7ms)
+  Rendered questions/edit.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/2" for 165.91.12.245 at 2018-11-04 20:06:54 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S6mwUSFVi/aRhS/69BAeIptVPntyUeTkFlCt8FiZxGv+QISg3FE7oomHWnfcRaqaWnp5OJFH4+QdHPfwp5Vlvg==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"General", "content"=>"When is the exam?", "option1"=>"Monday", "option2"=>"Tuesday", "option3"=>"Wednesday", "option4"=>"Thursday", "answer"=>"option4", "explanation"=>"Class is only on tuesday or thursday and tuesday is a holiday", "feedback"=>""}, "commit"=>"Update Question", "id"=>"2"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "t"], ["feedback", ""], ["id", 2]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/2
+Completed 302 Found in 15ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/questions/2" for 165.91.12.245 at 2018-11-04 20:06:54 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:06:57 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/3/edit" for 165.91.12.245 at 2018-11-04 20:07:04 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (9.0ms)
+  Rendered questions/edit.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/3" for 165.91.12.245 at 2018-11-04 20:07:10 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTMtxjrm6mDoDglurVEcDPNhmH8Z8AavrPPUkfSqxCAZItGF6WusZ5qIxMRlUtnaPmiNOj5ZWh40Brd8yDwfDQ==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"General", "content"=>"Who is the professor?", "option1"=>"Walker", "option2"=>"Chen", "option3"=>"Obama", "option4"=>"Trump", "answer"=>"option1", "explanation"=>"All of us know it", "feedback"=>""}, "commit"=>"Update Question", "id"=>"3"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "t"], ["feedback", ""], ["id", 3]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/3
+Completed 302 Found in 17ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/questions/3" for 165.91.12.245 at 2018-11-04 20:07:10 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:07:13 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/4/edit" for 165.91.12.245 at 2018-11-04 20:07:19 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.4ms)
+  Rendered questions/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/4" for 165.91.12.245 at 2018-11-04 20:07:29 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bpHsa6As0w2b/LuwBMFiNs0xmde9rNKe1oL9zuWv7ov3ZGEwQz8pFtudwaIxN4IGFSm+H4MU2EFAZTmeiRDrbg==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"Math", "content"=>"What is \\(\\frac{1+2^2}{5}\\)?", "option1"=>"5", "option2"=>"1", "option3"=>"\\(\\frac{1}{3}\\)", "option4"=>"0", "answer"=>"option2", "explanation"=>"A number divided by itself is 1.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "questions" SET "display" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["display", "t"], ["feedback", ""], ["id", 4]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/4
+Completed 302 Found in 16ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/questions/4" for 165.91.12.245 at 2018-11-04 20:07:29 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:07:32 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/5/edit" for 165.91.12.245 at 2018-11-04 20:07:44 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (7.7ms)
+  Rendered questions/edit.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/5" for 165.91.12.245 at 2018-11-04 20:07:51 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xzOzsOkHYY/CkGk2c9TZksdZhC9KbkPIgGbBtLNgoZZEvR3WaIFgaWPQ4b+vewXO/jQJLIFZSeqJDaoOjOjhtA==", "question"=>{"qtype"=>"True or False", "display"=>"No", "topic"=>"General", "content"=>"svjjjjjghhhhfsfgdf", "option1"=>"True", "option2"=>"False", "option3"=>"nil", "option4"=>"nil", "answer"=>"option1", "explanation"=>"svs", "feedback"=>""}, "commit"=>"Update Question", "id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "f"], ["id", 5]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/5
+Completed 302 Found in 15ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/questions/5" for 165.91.12.245 at 2018-11-04 20:07:51 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:07:53 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/6/edit" for 165.91.12.245 at 2018-11-04 20:08:01 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (13.5ms)
+  Rendered questions/edit.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/6" for 165.91.12.245 at 2018-11-04 20:08:03 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UnGkIcXrgI+mtMANdkaEIXYOtZZFnTHDszKSV23tJd/XrmASbYOKilvVy94KKDuQcS3z8/58aUv6Vw/oR20kDA==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"No", "topic"=>"General", "content"=>"sfgas", "option1"=>"sagsag", "option2"=>"sgasg", "option3"=>"sgsag", "option4"=>"sagsag", "answer"=>"option1", "explanation"=>"sagsag", "feedback"=>""}, "commit"=>"Update Question", "id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "feedback" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["feedback", ""], ["id", 6]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/6
+Completed 302 Found in 15ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/questions/6" for 165.91.12.245 at 2018-11-04 20:08:03 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:08:06 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/8/edit" for 165.91.12.245 at 2018-11-04 20:08:10 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.8ms)
+  Rendered questions/edit.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/8" for 165.91.12.245 at 2018-11-04 20:08:12 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KDAx/NeMZE2JYHLABpUuMcJ3PnBQJ31sHmHivp8wHgtS4mrv5P6V4Be/h562M5uw4fVg90CDpcby4ywQO66tWw==", "question"=>{"qtype"=>"True or False", "display"=>"No", "topic"=>"General", "content"=>"ydd", "option1"=>"True", "option2"=>"False", "option3"=>"nil", "option4"=>"nil", "answer"=>"option1", "explanation"=>"", "feedback"=>""}, "commit"=>"Update Question", "id"=>"8"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "f"], ["id", 8]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/8
+Completed 302 Found in 19ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/questions/8" for 165.91.12.245 at 2018-11-04 20:08:12 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:08:15 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/7/edit" for 165.91.12.245 at 2018-11-04 20:08:21 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.3ms)
+  Rendered questions/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/7" for 165.91.12.245 at 2018-11-04 20:08:24 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fAsts8NnLZNDr9Y/E0Dr76hWdNlfyrcjTU8yWhmyCWSGJ/LdY5eLNmD7mHAlyKi+S/Bt/rZpBlhLScgBw4s3MA==", "question"=>{"qtype"=>"True or False", "display"=>"No", "topic"=>"General", "content"=>"dhdh", "option1"=>"True", "option2"=>"False", "option3"=>"nil", "option4"=>"nil", "answer"=>"option1", "explanation"=>"", "feedback"=>"fgszdgs"}, "commit"=>"Update Question", "id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ? WHERE "questions"."id" = ?[0m  [["topic", "General"], ["display", "f"], ["id", 7]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/7
+Completed 302 Found in 16ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/questions/7" for 165.91.12.245 at 2018-11-04 20:08:24 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:08:26 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/9/edit" for 165.91.12.245 at 2018-11-04 20:08:30 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.6ms)
+  Rendered questions/edit.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/questions/9" for 165.91.12.245 at 2018-11-04 20:08:37 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9nDBJsNwiQra2rfo2gikzBC21ja3Wv+5cZW0/KwL1aDiBBfx/qHl+VbSUNqKOVtdZ5NlC9cdd6nKs2vQRuXRw==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"No", "topic"=>"Dynamic Programming", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ? WHERE "questions"."id" = ?[0m  [["topic", "Dynamic Programming"], ["display", "f"], ["id", 9]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 16ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:08:37 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:08:39 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:08:44 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 71.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:08:47 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:08:51 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (14.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 75.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:09:15 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/9/edit" for 165.91.12.245 at 2018-11-04 20:09:17 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (8.8ms)
+  Rendered questions/edit.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/questions/9" for 165.91.12.245 at 2018-11-04 20:09:28 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CyVFg9Nq3KwpVUfPMvd89YM9sFvHg9PAG+b3JPO7393jdJbYj52ZH+dlZFP7t7sLxuEmlzICzeBZCmxYQBBnzA==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"DynamicProgramming", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "questions" SET "topic" = ?, "display" = ? WHERE "questions"."id" = ?[0m  [["topic", "DynamicProgramming"], ["display", "t"], ["id", 9]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 15ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:09:28 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:09:31 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for 165.91.12.245 at 2018-11-04 20:09:33 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/9/edit" for 165.91.12.245 at 2018-11-04 20:09:37 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/_form.html.erb (9.0ms)
+  Rendered questions/edit.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/questions/9" for 165.91.12.245 at 2018-11-04 20:09:56 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A0LsobaZYZPFEG3q/2L09YOkgTDwiaq1IeECUP2UkrTrEz/66m4kIAsgTnY2IjMLxngX/AUItJVjDZksTj8qpQ==", "question"=>{"qtype"=>"Multiple Choice", "display"=>"Yes", "topic"=>"DynamicProgramming", "content"=>"Which of the following is/are property/properties of a dynamic programming problem?", "option1"=>"Optimal substructure", "option2"=>"Overlapping subproblems", "option3"=>"Greedy approach", "option4"=>"Both optimal substructure and overlapping subproblems", "answer"=>"option4", "explanation"=>"A problem that can be solved using dynamic programming possesses overlapping subproblems as well as optimal substructure properties.", "feedback"=>""}, "commit"=>"Update Question", "id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/questions/9
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/9" for 165.91.12.245 at 2018-11-04 20:09:56 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered questions/show.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:10:00 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (16.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&all_topics=selected&ok=clicked" for 165.91.12.245 at 2018-11-04 20:10:04 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "all_topics"=>"selected", "ok"=>"clicked"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/test_questions?utf8=%E2%9C%93&selected_topics%5BGeneral%5D=selected&selected_topics%5BMath%5D=selected&selected_topics%5BDynamicProgramming%5D=selected&mark%5B1%5D=marked&review=clicked" for 165.91.12.245 at 2018-11-04 20:10:14 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "selected_topics"=>{"General"=>"selected", "Math"=>"selected", "DynamicProgramming"=>"selected"}, "mark"=>{"1"=>"marked"}, "review"=>"clicked"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 71.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signoutwpause?answers%5B1%5D=blank&answers%5B2%5D=blank&answers%5B3%5D=blank&answers%5B4%5D=blank&answers%5B9%5D=blank&correctness%5B1%5D=&correctness%5B2%5D=&correctness%5B3%5D=&correctness%5B4%5D=&correctness%5B9%5D=&count=0&mark%5B1%5D=marked&mark%5B2%5D=%7Ereview&mark%5B3%5D=%7Ereview&mark%5B4%5D=%7Ereview&mark%5B9%5D=%7Ereview&selected_topics%5BDynamicProgramming%5D=selected&selected_topics%5BGeneral%5D=selected&selected_topics%5BMath%5D=selected" for 165.91.12.245 at 2018-11-04 20:10:21 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#signoutwpause as HTML
+  Parameters: {"answers"=>{"1"=>"blank", "2"=>"blank", "3"=>"blank", "4"=>"blank", "9"=>"blank"}, "correctness"=>{"1"=>"", "2"=>"", "3"=>"", "4"=>"", "9"=>""}, "count"=>"0", "mark"=>{"1"=>"marked", "2"=>"~review", "3"=>"~review", "4"=>"~review", "9"=>"~review"}, "selected_topics"=>{"DynamicProgramming"=>"selected", "General"=>"selected", "Math"=>"selected"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "testrecs" ("userid", "correctness", "answers", "mark", "seltopics") VALUES (?, ?, ?, ?, ?)[0m  [["userid", 1], ["correctness", "--- !ruby/object:ActionController::Parameters\nparameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  '1': ''\n  '2': ''\n  '3': ''\n  '4': ''\n  '9': ''\npermitted: false\n"], ["answers", "--- !ruby/object:ActionController::Parameters\nparameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  '1': blank\n  '2': blank\n  '3': blank\n  '4': blank\n  '9': blank\npermitted: false\n"], ["mark", "--- !ruby/object:ActionController::Parameters\nparameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  '1': marked\n  '2': \"~review\"\n  '3': \"~review\"\n  '4': \"~review\"\n  '9': \"~review\"\npermitted: false\n"], ["seltopics", "--- !ruby/object:ActionController::Parameters\nparameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess\n  DynamicProgramming: selected\n  General: selected\n  Math: selected\npermitted: false\n"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 27ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:10:21 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:10:24 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 165.91.12.245 at 2018-11-04 20:10:26 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TvnIgCC9fi687Vn/RAKk3b0lFzjPoIeBgoiuzKAolnU8HMN8JLCVxK5cgas9+ntACrPsuudTl4EDN89vNhYuRw==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-11-04 20:10:26.564143"], ["last_sign_in_at", "2018-11-04 20:06:23.570533"], ["last_sign_in_ip", "165.91.12.245"], ["sign_in_count", 9], ["updated_at", "2018-11-04 20:10:26.565509"], ["id", 1]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/
+Completed 302 Found in 169ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:10:26 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:10:32 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resume" for 165.91.12.245 at 2018-11-04 20:10:36 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#resume as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTestrecs Load (0.1ms)[0m  [1m[34mSELECT  "testrecs".* FROM "testrecs" WHERE "testrecs"."userid" = ? LIMIT ?[0m  [["userid", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "testrecs" WHERE "testrecs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://cf11a679fc784786810429cdc24860e1.vfs.cloud9.us-east-2.amazonaws.com/test_questions?answers%5B1%5D=blank&answers%5B2%5D=blank&answers%5B3%5D=blank&answers%5B4%5D=blank&answers%5B9%5D=blank&correctness%5B1%5D=&correctness%5B2%5D=&correctness%5B3%5D=&correctness%5B4%5D=&correctness%5B9%5D=&mark%5B1%5D=marked&mark%5B2%5D=%7Ereview&mark%5B3%5D=%7Ereview&mark%5B4%5D=%7Ereview&mark%5B9%5D=%7Ereview&notice=Last+saved+test+loaded.&ok=clicked&selected_topics%5BDynamicProgramming%5D=selected&selected_topics%5BGeneral%5D=selected&selected_topics%5BMath%5D=selected
+Completed 302 Found in 14ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/test_questions?answers%5B1%5D=blank&answers%5B2%5D=blank&answers%5B3%5D=blank&answers%5B4%5D=blank&answers%5B9%5D=blank&correctness%5B1%5D=&correctness%5B2%5D=&correctness%5B3%5D=&correctness%5B4%5D=&correctness%5B9%5D=&mark%5B1%5D=marked&mark%5B2%5D=%7Ereview&mark%5B3%5D=%7Ereview&mark%5B4%5D=%7Ereview&mark%5B9%5D=%7Ereview&notice=Last+saved+test+loaded.&ok=clicked&selected_topics%5BDynamicProgramming%5D=selected&selected_topics%5BGeneral%5D=selected&selected_topics%5BMath%5D=selected" for 165.91.12.245 at 2018-11-04 20:10:37 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  Parameters: {"answers"=>{"1"=>"blank", "2"=>"blank", "3"=>"blank", "4"=>"blank", "9"=>"blank"}, "correctness"=>{"1"=>"", "2"=>"", "3"=>"", "4"=>"", "9"=>""}, "mark"=>{"1"=>"marked", "2"=>"~review", "3"=>"~review", "4"=>"~review", "9"=>"~review"}, "notice"=>"Last saved test loaded.", "ok"=>"clicked", "selected_topics"=>{"DynamicProgramming"=>"selected", "General"=>"selected", "Math"=>"selected"}}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (17.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /home/ec2-user/environment/original/v3/selfeval/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 165.91.12.245 at 2018-11-04 20:14:27 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VisitorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visitors/index.html.erb within layouts/application
+  Rendered visitors/index.html.erb within layouts/application (241.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.0ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 384ms (Views: 353.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/test_questions" for 165.91.12.245 at 2018-11-04 20:14:41 +0000
+Cannot render console from 165.91.12.245! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TestQuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE ("questions"."display" = 't' OR "questions"."display" IS NULL)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "testrecs" WHERE "testrecs"."userid" = ?[0m  [["userid", 1]]
+  Rendering test_questions/index.html.haml within layouts/application
+  Rendered test_questions/index.html.haml within layouts/application (30.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 80.7ms | ActiveRecord: 1.7ms)
+
+
