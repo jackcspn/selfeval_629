@@ -78,7 +78,7 @@ Rails.application.configure do
 
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'selfeval-codepengu-sw-1.herokuapp.com'}#selfeval-codepengu-606 }
+  config.action_mailer.default_url_options = { :host => 'stormy-sea-28124.herokuapp.com'}#selfeval-codepengu-606 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
