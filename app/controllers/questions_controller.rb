@@ -4,7 +4,22 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+    # @questions = Question.all
+    @user_id = current_user.id
+    # puts("user_id")
+    # puts(@user_id)
+    # @questions = Question.find{|question| question.uid == @user_id || question.uid == nil}
+    if @user_id == 1
+      @questions = Question.all
+    else
+      @questions = Question.where(uid: @user_id)
+    end
+    # puts("questions count")
+    # puts(@questions.size)
+    # puts(@questions[1])
+    # puts(@questions[0] == nil)
+    # // if @questions[0] == nil render an empty page
+    # arr.find {|a| a > 5}
   end
 
   # GET /questions/1
@@ -36,6 +51,14 @@ class QuestionsController < ApplicationController
       @question.option4 = 'nil'
       @question.answer = params[:question][:answer]
       @question.explanation = params[:question][:explanation]
+      @question.uid = current_user.id
+      # @question.display = false
+      @question.feedback = nil
+      if current_user.id == 1
+        @question.display = true
+      else
+        @question.display = false
+      end
       #if @question.answer == "True" or @question.answer == "true"
       #  @question.answer = "option1"
       #else
@@ -44,6 +67,14 @@ class QuestionsController < ApplicationController
       @question.image = params[:question][:image] 
     else
       @question = Question.new(question_params)
+      @question.uid = current_user.id
+      # @question.display = false
+      @question.feedback = nil
+      if current_user.id == 1
+        @question.display = true
+      else
+        @question.display = false
+      end
     end
     
     respond_to do |format|
@@ -60,6 +91,14 @@ class QuestionsController < ApplicationController
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
   def update
+    if params[:question][:feedback] != nil
+      params[:question][:feedback] = params[:question][:feedback]
+    end
+    if params[:question][:display] == "Yes"
+      params[:question][:display] = true
+    else
+      params[:question][:display] = false
+    end
     if params[:question][:remove_question_image] == "1"
       @question.remove_image = true
       if params[:question][:topic] != nil
@@ -113,7 +152,7 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:qtype, :topic, :content, :image, :option1, :option2, :option3, :option4, :answer, :explanation)
+      params.require(:question).permit(:qtype, :topic, :content, :image, :option1, :option2, :option3, :option4, :answer, :explanation, :display, :feedback)
     end
     
     def image_remove_params

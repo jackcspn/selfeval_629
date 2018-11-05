@@ -34,12 +34,25 @@
         <td><strong>Topic: </strong><%= question.topic %></td>
       </tr>
       <tr>
+        <td><strong>Feedback: </strong><%= question.feedback %></td>
+      </tr>
+      <tr>
+        <td><strong>Approved: </strong><%= "Yes" if question.display==true %><%= "No" if question.display==false %></td>
+      </tr>
+      <% if current_user.admin? %>
+        <tr>
+        <td><strong>User_id: </strong><%= question.uid %></td>
+      </tr>
+      <% end %>
+      <tr>
         <td>
           <table>
             <tr>
                <td><strong id="show"><%= link_to 'Show', question %></strong></td>
-               <td><strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong></td>
-               <td><strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
+                <% if current_user.admin? %>
+                 <td><strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong></td>
+                 <td><strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
+                <% end %>
             </tr>
           </table>
         </td>

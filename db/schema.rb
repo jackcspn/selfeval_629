@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430203743) do
+ActiveRecord::Schema.define(version: 20181030223225) do
 
   create_table "questions", force: :cascade do |t|
     t.string "content"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20180430203743) do
     t.string "explanation"
     t.string "image"
     t.string "topic"
+    t.boolean "display"
+    t.string "feedback"
+    t.integer "uid"
   end
 
   create_table "testrecs", force: :cascade do |t|
