@@ -13,7 +13,7 @@ Bundler.require(*Rails.groups)
 
 module RailsDeviseRoles #RailsDeviseRoles
   class Application < Rails::Application
-    config.action_mailer.default_url_options = { host: 'stormy-sea-28124.herokuapp.com' }
+    config.action_mailer.default_url_options = { host: 'salty-plateau-94339.herokuapp.com' }
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
