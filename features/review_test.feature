@@ -23,7 +23,7 @@ Feature: review test
     Then I should see "general"
     And I should see "606_course"
     And I should see "All Topics"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     Then the color of "1" in "#review" should be ""
     And the color of "2" in "#review" should be ""

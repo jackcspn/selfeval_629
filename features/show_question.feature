@@ -13,6 +13,8 @@ Feature:Show the content of existing  questions in the Question List Page
   |  T/F    | topic3 | Question 3   | True    | False        |  nil         |  nil       | option1 |  exp3        |
   |  T/F    | topic1 | Question 4   | True    | False        |  nil         |  nil       | option2 |  exp4        |
   
+  Given I am an admin
+  
   Scenario: showing the content of the existing question
   When I am on the Question List Page
   And I follow "Show" of "1"

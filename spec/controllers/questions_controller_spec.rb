@@ -28,7 +28,7 @@ RSpec.describe QuestionsController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Question. As you add validations to Question, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
+   let(:valid_attributes) {
     {qtype: "Mutiple Choice", topic: "Topic 1", content: "Question1", option1: "1", option2: "2", option3: "3", option4: "4", answer: "option1", explanation: "explanation", image: File.open(Rails.root.join("test/fixtures/files/fruit.jpg"))}
   }
 
@@ -36,9 +36,26 @@ RSpec.describe QuestionsController, type: :controller do
     {qtype: "Multiple Choice", content: "Question1", option1: "", option2: "False", option3: "nil", option4: "nil", answer: "option1", explanation: "explanation"}
   }
   
+  let(:true_false_attributes) {
+    {qtype: "True or False", topic: "Topic 2", content: "Questio2", answer: "option1", explanation: "explanation", image: File.open(Rails.root.join("test/fixtures/files/fruit.jpg"))}
+  }
+  
+  let(:invalid_true_false_attributes) {
+    {qtype: "True or False", topic: "Topic 2", content: "Questio2", answer: "option3", explanation: "explanation", image: File.open(Rails.root.join("test/fixtures/files/fruit.jpg"))}
+  }
+  
   let(:image_remove_params) {
     {remove_question_image: "1"}
   }
+
+  
+  before (:each) do
+        user_adm = FactoryGirl.create(:user, email: 'admin@test.com', password: "pswdadm123")
+        user_regular = FactoryGirl.create(:user, email: 'regular@test.com', password: "pswdreg123")
+        sign_in user_regular
+        @adm = user_adm
+        @regular = user_regular
+  end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -51,6 +68,15 @@ RSpec.describe QuestionsController, type: :controller do
       question = Question.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
+    end
+
+  
+  it "shows admin user all questions" do
+      question = Question.create! valid_attributes
+      sign_in @adm
+      get :index, params: {}, session: valid_session
+      expect(response).to be_success
+      sign_in @regular
     end
   end
 
@@ -89,12 +115,33 @@ RSpec.describe QuestionsController, type: :controller do
         post :create, params: {question: valid_attributes}, session: valid_session
         expect(response).to redirect_to(Question.last)
       end
+      
+      it "sets regular user question not to be shown directely" do
+        post :create, params: {question: valid_attributes}, session: valid_session
+        expect(assigns(:question).display).to be(false)
+      end
+      
+      it "sets admin question to be shown" do
+        sign_in @adm
+        post :create, params: {question: valid_attributes}, session: valid_session
+        expect(assigns(:question).display).to be(true)
+        sign_in @regular
+      end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
         post :create, params: {question: invalid_attributes}, session: valid_session
         expect(response).to be_success
+      end
+      
+    end
+    
+    context "with true or false question" do
+      it "creates a new Question" do
+        expect {
+          post :create, params: {question: true_false_attributes}, session: valid_session
+        }.to change(Question, :count).by(1)
       end
     end
   end
@@ -123,7 +170,7 @@ RSpec.describe QuestionsController, type: :controller do
     
     context "with valid params" do
       let(:new_attributes) {
-        {topic:"general", content: "Question2", qtype: "True or False", answer: "option2", remove_question_image: "1"}
+        {topic:"general", content: "Question2", qtype: "True or False", answer: "option2", remove_question_image: "1", display: "Yes", feedback: "good question"}
       }
       
       it "updates the requested question by removing image" do
@@ -132,6 +179,7 @@ RSpec.describe QuestionsController, type: :controller do
         question.reload
         question.image.present?.should eql false
       end
+      
     end
 
     context "with invalid params" do
@@ -140,6 +188,8 @@ RSpec.describe QuestionsController, type: :controller do
         put :update, params: {id: question.to_param, question: invalid_attributes}, session: valid_session
         expect(response).to be_success
       end
+      
+     
     end
   end
 
@@ -151,7 +201,7 @@ RSpec.describe QuestionsController, type: :controller do
       }.to change(Question, :count).by(-1)
     end
 
-    it "redirects to the questions list" do
+   it "redirects to the questions list" do
       question = Question.create! valid_attributes
       delete :destroy, params: {id: question.to_param}, session: valid_session
       expect(response).to redirect_to(questions_url)

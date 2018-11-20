@@ -5,6 +5,8 @@ Feature: submit answers to questions
   I want to view questions and submit answers for them
   
   Background: questions in database
+    
+  Background: users in database
 
     Given the following questions exist:
     | content                | qtype           | topic      | option1 | option2     | option3   | option4  | answer  |
@@ -12,12 +14,12 @@ Feature: submit answers to questions
     | When is the exam?      | Multiple Choice | 606_course | Monday  | Tuesday     | Wednesday | Thursday | option4 |
     | Who is the professor?  | Multiple Choice | 606_course | Walker  | Chen        | Obama     | Trump    | option1 |
     
-    Given the following users exist:
-    | name        | email                   | created_at        | role        | encrypted_password|
-    | Xien        | xthomas@gmail.com       | shieldedRavine    | admin       |     123456           |
-    | Edmaad      | edScrumMaster           | shovelWaterSpirit | user        |     567           |
-    | Alien       | iAmReal                 | sugarStarWars     | user        |                |
-    | George      | armyOfOne               | georgeOfTheJungle | user        |                |
+   Given the following users exist:
+  | name        | email                   | created_at        | role        | password    |
+  | Xien        | xthomas@test.com        | shieldedRavine    | admin       | xienpw123   |
+  | Edmaad      | edScrumMaster@test.com  | shovelWaterSpirit | user        | edmaadpw123 |
+  | Alien       | iAmReal@test.com        | sugarStarWars     | user        | alienpw123  |
+  | George      | armyOfOne@test.com      | georgeOfTheJungle | user        | georgepw123 |
 
 
   Scenario: view list of questions on application's test_questions page
@@ -31,7 +33,7 @@ Feature: submit answers to questions
     Then I should see "general"
     And I should see "606_course"
     And I should see "OK"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     Then I should see "606_course"
     And I should not see "general"
@@ -63,7 +65,7 @@ Feature: submit answers to questions
     Then I should see "general"
     And I should see "606_course"
     And I should see "OK"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     When I choose "option3" for "answers[2]"
     And I choose "option1" for "answers[3]"
@@ -87,7 +89,7 @@ Feature: submit answers to questions
     Then I should see "general"
     And I should see "606_course"
     And I should see "OK"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     And I choose "option1" for "answers[2]"
     When I press "Review All"
@@ -108,7 +110,7 @@ Feature: submit answers to questions
     Then I should see "general"
     And I should see "606_course"
     And I should see "OK"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     And I choose "option1" for "answers[2]"
     When I press "Review All"

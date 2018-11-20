@@ -54,11 +54,7 @@ class QuestionsController < ApplicationController
       @question.uid = current_user.id
       # @question.display = false
       @question.feedback = nil
-      if current_user.id == 1
-        @question.display = true
-      else
-        @question.display = false
-      end
+     
       #if @question.answer == "True" or @question.answer == "true"
       #  @question.answer = "option1"
       #else
@@ -70,11 +66,11 @@ class QuestionsController < ApplicationController
       @question.uid = current_user.id
       # @question.display = false
       @question.feedback = nil
-      if current_user.id == 1
-        @question.display = true
-      else
-        @question.display = false
-      end
+    end
+    if current_user.id == 1
+       @question.display = true
+    else
+      @question.display = false
     end
     
     respond_to do |format|

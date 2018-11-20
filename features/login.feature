@@ -10,44 +10,50 @@ Feature: Login to the website
 Background: Users in a database
  
   Given the following users exist:
-  | name        | email         | created_at        | role  | encrypted_password|
-  | Xien        | xthomas       | shieldedRavine    | admin       |     123           |
-  | Edmaad      | edScrumMaster | shovelWaterSpirit | user       |     567           |
-  | Alien       | iAmReal       | sugarStarWars     | user       |                |
-  | George      | armyOfOne     | georgeOfTheJungle | user       |                |
+  | name        | email                   | created_at        | role        | password    |
+  | Xien        | xthomas@test.com        | shieldedRavine    | admin       | xienpw123   |
+  | Edmaad      | edScrumMaster@test.com  | shovelWaterSpirit | user        | edmaadpw123 |
+  | Alien       | iAmReal@test.com        | sugarStarWars     | user        | alienpw123  |
+  | George      | armyOfOne@test.com      | georgeOfTheJungle | user        | georgepw123 |
 
 Scenario: verify output when email id is entered
   Given I am on the home page
   Then I follow "Sign in"
-  And  I fill in "Email" with "xien.thomas@email.com"
-  And  I fill in "Password" with "password"
+  And  I fill in "Email" with "edScrumMaster@test.com"
+  And  I fill in "Password" with "edmaadpw123"
   And  I press "Sign in"
+  Then I should be on the homepage
+  And I should see "Signed in successfully."
  
 Scenario: verify signup from login page
   Given I am on the home page
   Then I follow "Sign up"
-  And  I fill in "Name" with "xien"
-  And  I fill in "Password" with "password"
-  And  I fill in "Email" with "xien.thomas@email.com"
-  And  I fill in "Password confirmation" with "password"
+  And  I fill in "Name" with "john"
+  And  I fill in "Password" with "johnpw123"
+  And  I fill in "Email" with "john@email.com"
+  And  I fill in "Password confirmation" with "johnpw123"
   And I press "Sign up"
+  Then I should be on the homepage
+  And I should see "You have signed up successfully."
   
 Scenario: verify output when email id is entered wrong (sad path)
   Given I am on the home page
   Then I follow "Sign in"
   Then  I follow "Sign up now"
-  And  I fill in "Name" with "xien"
-  And  I fill in "Password" with "password"
-  And  I fill in "Email" with "xienthomas"
-  And  I fill in "Password confirmation" with "password"
-  Then I should be on Sign up
+  And  I fill in "Name" with "mike"
+  And  I fill in "Password" with "mikepw123"
+  And  I fill in "Email" with "m"
+  And  I fill in "Password confirmation" with "mikepw123"
+  And I press "Sign up"
+  And I should not see "You have signed up successfully."
   
 Scenario: admin sign in
   Given I am on the home page
   Then I follow "Sign in"
-  And  I fill in "Password" with "password"
-  And  I fill in "Email" with "xienthomas"
+  And  I fill in "Password" with "xienpw123"
+  And  I fill in "Email" with "xthomas@test.com "
   And I press "Sign in"
+  
   
 Scenario: admin deleting users
   Given I am on the Users page

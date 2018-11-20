@@ -1,12 +1,15 @@
 Given /the following users exist/ do |table|
-    table.hashes.each.each do |users|
-        User.create(users)
+    table.hashes.each do |users|
+        User.create! users
     end
 end
 
 Given /I am an admin/ do 
-    c_user = User.create!("example@ex.com","password")
-    c_user.set_admin
+    User.create!(email: "adminemail@test.com", password: "adminpw123", role: "admin", id:"1")
+    visit '/users/sign_in'
+    fill_in "Email", :with => "adminemail@test.com"
+    fill_in "Password", :with => "adminpw123"
+    click_button 'Sign in'
 end
 
 # When("I choose {string} for {string}") do |string, string2|

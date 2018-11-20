@@ -24,7 +24,7 @@ Scenario: summary of the test questions
     Then I should see "general"
     And I should see "606_course"
     And I should see "OK"
-    When I choose "606_course"
+    When I check "606_course"
     And I press "OK"
     And I choose "option3" for "answers[2]"
     And I choose "option1" for "answers[3]"

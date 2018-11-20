@@ -12,10 +12,6 @@ Then("I should be redirected to Edit Question Page of {string}") do |string|
   visit "/questions/#{string}/edit"
 end
 
-Then("I should be redirected to the homepage") do
-  visit "/questions"
-end
-
 Then("I should be redirected to the Show page of {string}") do |string|
   visit "/questions/#{string}"
 end
