@@ -48,9 +48,9 @@ end
 Given /^I am loggedin as "([^\"]*)" with password "([^\"]*)"$/ do |email, password|
   unless email.blank?
     visit new_user_session_path
-    user = FactoryGirl.create(:user)
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => user.password
+    #user = FactoryGirl.create(:user)
+    fill_in "Email", :with => email
+    fill_in "Password", :with => password
     click_button "Sign In"
   end
 end
