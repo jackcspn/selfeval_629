@@ -1,18 +1,29 @@
 Determine whether students are ready to take CSCE 629, so they can decide whether to sign up.
 
 Getting started
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo and then install the needed gems in superuser mode:
+$ sudo su
+# rvm use 2.3.1
+# bundle install --without production
+# exit
 
-$ bundle install --without production
 Next, apply database migrations to both the dev and test databases:
-
+$ rvm use 2.3.1
 $ bundle exec rake db:migrate
 $ bundle exec rake db:migrate RAILS_ENV=test
 $ bundle exec rake db:seed
-Run rspec and cucumber tests to make sure everything is working:
 
+If seed aborted, try
+$ bundle exec rake db:reset
+
+Run rspec and cucumber tests to make sure everything is working:
 $ rspec
 $ cucumber
-If the tests pass, you'll be ready to run the app in a local server:
 
+If the tests pass, you'll be ready to run the app in a local server:
 $ rails server -p $PORT -b $IP
+
+For Amazon AWS users: if app link dosen't show up,
+On the top bar, click Preview -> Preview Running Application. This will open the built-in browser with empty display. 
+Copy the URL from the browser, paste in your chrome or IE browser. Or click 'Pop Out Into New Window' next to the URL.
+You should see the application loaded there.
