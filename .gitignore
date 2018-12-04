@@ -2,7 +2,7 @@ config/mail.yml
 *.log
 *~
 db/*.sqlite*
-development.sqlite3
+db/development.sqlite3
 db/schema.rb
 .*.swp
 .*.swo
