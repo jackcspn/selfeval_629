@@ -24,6 +24,6 @@ If the tests pass, you'll be ready to run the app in a local server:
 $ rails server -p $PORT -b $IP
 
 For Amazon AWS users: if app link dosen't show up,
-On the top bar, click Preview -> Preview Running Application. This will open the built-in browser with empty display. 
+On the top bar, click 'Preview' -> 'Preview Running Application'. This will open the built-in browser with empty display. 
 Copy the URL from the browser, paste in your chrome or IE browser. Or click 'Pop Out Into New Window' next to the URL.
 You should see the application loaded there.
