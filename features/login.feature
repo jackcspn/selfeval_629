@@ -53,18 +53,21 @@ Scenario: admin sign in
   And  I fill in "Password" with "xienpw123"
   And  I fill in "Email" with "xthomas@test.com "
   And I press "Sign in"
+  Then I should be on the home page
   
   
 Scenario: admin deleting users
-  Given I am on the Users page
-  # Then I follow "Change Role"
-  
-#   And  I press "Log in"
-#   Given I am on the login page
-#   And  I fill in "Username" with "xthomas"
-#   And  I fill in "Password" with "shieldedRavine"
-#   And  I press "login"
-#   Then I should be on the home page of "Admin" 
+  Given I am on the home page
+  Then I follow "Sign in"
+  And  I fill in "Password" with "xienpw123"
+  And  I fill in "Email" with "xthomas@test.com "
+  And I press "Sign in"
+  And I am on the home page
+  And I follow "Users"
+  And I am on the users page
+  And I follow "iamreal@test.com"
+  Then I should see "Name: Alien"
+  And I should see "Email: iamreal@test.com"
   
 # Scenario: add User to existing Database
 #   Given I am on the login page
