@@ -3,6 +3,8 @@ Determine whether students are ready to take CSCE 629, so they can decide whethe
 
 ## Getting started
 
+To see specific instructions, please read 'README' above
+
 To get started with the app, clone the repo and then install the needed gems:
 
 ```
