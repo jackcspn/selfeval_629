@@ -33,7 +33,7 @@
           <table id="action">
             <tr>
               <% if current_user.admin? %>
-               <td><strong id="approve"><%= link_to 'Approve', question, method: :approve %></strong><br><br>
+               <td><strong id="approve"><%= link_to 'Approve', "questions/approve/#{question.id}", method: :get %></strong><br><br>
               <% end %>
                <strong id="show"><%= link_to 'Show', question %></strong><br><br>
                <strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong><br><br>

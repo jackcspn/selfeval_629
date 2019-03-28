@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'questions/feedback'
   get 'questions/answer'
   get 'questions/:type' => 'questions#new'
+  match 'questions/approve/:id' => 'questions#approve', :via => :get
   
   # get '/testquestions', to: 'test_questions#index'
   

@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :approve]
 
   # GET /questions
   # GET /questions.json
@@ -141,7 +141,17 @@ class QuestionsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  
+  def approve
+    @question.display = true
+    @question.save
+    respond_to do |format|
+      format.html { redirect_to questions_url, notice: 'Question was successfully approved.' }
+      format.json { head :no_content }
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
