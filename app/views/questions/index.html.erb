@@ -1,58 +1,41 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Questions</h1>
 <br>
-<strong id="new_question"><%= link_to 'New Question', new_question_path %></strong>
+<strong id="new_question"><%= link_to 'New Question', new_question_path %></strong><br><br>
 <br>
 <br>
-<table>
+<% if user_signed_in? %>
+<table id="not_approved_question" class="table table-bordered table-striped">
+  <h3>Awaiting Approving Questions: </h3>
+  <tr>
+    <th>Question</th>
+    <th>Action</th>
+  </tr>
   <tbody>
-    <% i=1 %>
+    <% i=0 %>
     <% @questions.each do |question| %>
+    <%   if question.display == true %>
+    <%     next %>
+    <%   end %>
       <tr>
-        <td><strong><%= i %>.) Content:<%= question.content %></strong></td>
-      </tr>
-      <tr>
-        <td><strong>Option 1: </strong><%= question.option1 %></td>
-      </tr>
-      <tr>
-        <td><strong>Option 2: </strong><%= question.option2 %></td>
-      </tr>
-      <tr>
-        <td><strong>Option 3: </strong><%= question.option3 %></td>
-      </tr>
-      <tr>
-        <td><strong>Option 4: </strong><%= question.option4 %></td>
-      </tr>
-      <tr>
-        <td><strong>Answer: </strong><%= question.answer %></td>
-      </tr>
-      <tr>
-        <td><strong>Explanation: </strong><%= question.explanation %></td>
-      </tr>
-      <tr>
-        <td><strong>Topic: </strong><%= question.topic %></td>
-      </tr>
-      <tr>
-        <td><strong>Feedback: </strong><%= question.feedback %></td>
-      </tr>
-      <tr>
-        <td><strong>Approved: </strong><%= "Yes" if question.display==true %><%= "No" if question.display==false %></td>
-      </tr>
-      <% if current_user.admin? %>
-        <tr>
-        <td><strong>User_id: </strong><%= question.uid %></td>
-      </tr>
-      <% end %>
-      <tr>
-        <td>
-          <table>
+        <td width="80%"><strong><%= i %>.) Content:<%= question.content %></strong><br>
+        <strong>Option 1: </strong><%= question.option1 %><br>
+        <strong>Option 2: </strong><%= question.option2 %><br>
+        <strong>Option 3: </strong><%= question.option3 %><br>
+        <strong>Option 4: </strong><%= question.option4 %><br>
+        <strong>Answer: </strong><%= question.answer %><br>
+        <strong>Explanation: </strong><%= question.explanation %><br>
+        <strong>Topic: </strong><%= question.topic %><br>
+        <strong>Feedback: </strong><%= question.feedback %><br>
+        <strong>User_id: </strong><%= question.uid %><br>
+        <td width="20%">
+          <table id="action">
             <tr>
-               <td><strong id="show"><%= link_to 'Show', question %></strong></td>
-                <% if current_user.admin? %>
-                 <td><strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong></td>
-                 <td><strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
-                <% end %>
+              <% if current_user.admin? %>
+               <td><strong id="approve"><%= link_to 'Approve', "questions/approve/#{question.id}", method: :get %></strong><br><br>
+              <% end %>
+               <strong id="show"><%= link_to 'Show', question %></strong><br><br>
+               <strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong><br><br>
+               <strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
             </tr>
           </table>
         </td>
@@ -60,7 +43,52 @@
       <% i=i+1 %>
     <% end %>
   </tbody>
+  <caption>There are total <%= i %> questions waiting for approving.</caption>
 </table>
+ 
+
+<hr />
+
+<table id="approved_question" class="table table-bordered table-striped">
+  <h3>Approved Questions: </h3>
+  <tbody>
+    <tr>
+      <th>Question</th>
+      <th>Action</th>
+    </tr>
+    <% i=0 %>
+    <% @questions.each do |question| %>
+    <%   if question.display == false %>
+    <%     next %>
+    <%   end %>
+      <tr>
+        <td width="80%"><strong><%= i %>.) Content:<%= question.content %></strong><br>
+        <strong>Option 1: </strong><%= question.option1 %><br>
+        <strong>Option 2: </strong><%= question.option2 %><br>
+        <strong>Option 3: </strong><%= question.option3 %><br>
+        <strong>Option 4: </strong><%= question.option4 %><br>
+        <strong>Answer: </strong><%= question.answer %><br>
+        <strong>Explanation: </strong><%= question.explanation %><br>
+        <strong>Topic: </strong><%= question.topic %><br>
+        <strong>Feedback: </strong><%= question.feedback %><br>
+        <strong>User_id: </strong><%= question.uid %><br>
+        <strong>Approved: </strong><%= "Yes" if question.display==true %><%= "No" if question.display==false %>
+        <td width="20%">
+          <table id="action">
+            <tr>
+               <td><strong id="show"><%= link_to 'Show', question %></strong><br><br>
+               <strong id="edit"><%= link_to 'Edit', edit_question_path(question) %></strong><br><br>
+               <strong id="destroy"><%= link_to 'Delete', question, method: :delete, data: { confirm: 'Are you sure?' } %></strong></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <% i=i+1 %>
+    <% end %>
+  </tbody>
+  <caption>There are total <%= i %> approved questions.</caption>
+</table>
+<% end %>
 
 <br>
 

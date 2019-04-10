@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :approve]
 
   # GET /questions
   # GET /questions.json
@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
     # puts("user_id")
     # puts(@user_id)
     # @questions = Question.find{|question| question.uid == @user_id || question.uid == nil}
-    if @user_id == 1
+    if current_user.admin?
       @questions = Question.all
     else
       @questions = Question.where(uid: @user_id)
@@ -52,7 +52,8 @@ class QuestionsController < ApplicationController
       @question.answer = params[:question][:answer]
       @question.explanation = params[:question][:explanation]
       @question.uid = current_user.id
-      # @question.display = false
+      # @question.approved = 'false'
+      @question.display = false
       @question.feedback = nil
      
       #if @question.answer == "True" or @question.answer == "true"
@@ -66,8 +67,9 @@ class QuestionsController < ApplicationController
       @question.uid = current_user.id
       # @question.display = false
       @question.feedback = nil
+      @question.approved = false
     end
-    if current_user.id == 1
+    if current_user.admin?
        @question.display = true
     else
       @question.display = false
@@ -75,7 +77,7 @@ class QuestionsController < ApplicationController
     
     respond_to do |format|
       if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
+        format.html { redirect_to @question, notice: 'Question was successfully created, waiting for approving' }
         format.json { render :show, status: :created, location: @question }
       else
         format.html { render :new }
@@ -139,7 +141,17 @@ class QuestionsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  
+  def approve
+    @question.display = true
+    @question.save
+    respond_to do |format|
+      format.html { redirect_to questions_url, notice: 'Question was successfully approved.' }
+      format.json { head :no_content }
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
