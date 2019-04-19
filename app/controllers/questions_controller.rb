@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
   def index
     # @questions = Question.all
     @user_id = current_user.id
+    
     # puts("user_id")
     # puts(@user_id)
     # @questions = Question.find{|question| question.uid == @user_id || question.uid == nil}
@@ -19,6 +20,7 @@ class QuestionsController < ApplicationController
     # puts(@questions[1])
     # puts(@questions[0] == nil)
     # // if @questions[0] == nil render an empty page
+    
     # arr.find {|a| a > 5}
   end
 
@@ -30,6 +32,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
+    @all_topics = Hash[Question.all.map {|question| [question.topic, question.topic]}]
   end
 
   # GET /questions/1/edit
