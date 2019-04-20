@@ -2,6 +2,7 @@
 $(document).ready(function initfunction()
 {
   var elem = document.getElementById("question_qtype");
+  
   //console.log('hi')
   //console.log(elem.value)
   var hiddenDiv1 = document.getElementById("opt1");
@@ -12,6 +13,9 @@ $(document).ready(function initfunction()
   hiddenDiv3.style.display = (elem.value == "True or False") ? "none":"block";
   var hiddenDiv4 = document.getElementById("opt4");
   hiddenDiv4.style.display = (elem.value == "True or False") ? "none":"block";
+  // var hiddenDiv6 = document.getElementById("newtopic");
+  // hiddenDiv6.style.display = (elem1.value == "new topic") ? "block":"none";
+  // alert(elem1.value);
   var r1 = document.getElementsByClassName("radiobutton");
   for (var i = 2, length = r1.length; i < 4; i++)
   {
@@ -45,6 +49,11 @@ $(document).ready(function initfunction()
   
   console.log(document.getElementById("question_image"));
 })
+// var elem1 = document.getElementById("question_topic");
+// elem1.onchange = function myFunction1(){
+//     var hiddenDiv6 = document.getElementById("newtopic");
+//     hiddenDiv6.style.display = (elem1.value == "new topic") ? "block":"none";
+// })
 </script>
 
 <%= form_with(model: question, local: true) do |form| %>
@@ -80,13 +89,22 @@ $(document).ready(function initfunction()
   <%= javascript_include_tag('question.js') %>
   
   <p><b> Note </b>: Mathematical equations written in LaTeX must be delimitted by \(...\)</p>
-  
+  <!--script type="text/javascript">
+  function myFunction1(){
+    alert("hhh");
+    // var elem1 = document.getElementById("question_topic");
+    // var hiddenDiv6 = document.getElementById("newtopic");
+    // hiddenDiv6.style.display = (elem1.value == "new topic") ? "block":"none";
+  }
+  </script>
   <div class="topic">
     <%= form.label :topic %>
-    <%= form.select :topic, options_for_select(@all_topics, :selected => "General"), {:onchange => "if (this.selectedIndex) myFunction();", :onload => "initfunction();"}, id: :question_topic %>
-  <!--"General" => "General", "Math" => "Math", "Dynamic Programming" => "Dynamic Programming-->
+    <!--%= form.select :topic, options_for_select(@all_topics, :selected => "General"), {:onchange => "if (this.selectedIndex) myFunction1();", :onload => "initfunction();"}, id: :question_topic %>
   </div>
-  
+  <div  id="newtopic" style="display:block" class="field">
+    <%= form.label :newtopic  %>
+    <%= form.text_area :topic, size: "20x4"%>
+  </div>
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content, size: "100x4", id: :question_content%>

@@ -33,10 +33,13 @@ class QuestionsController < ApplicationController
   def new
     @question = Question.new
     @all_topics = Hash[Question.all.map {|question| [question.topic, question.topic]}]
+    @all_topics["new topic"]= "new topic"
   end
 
   # GET /questions/1/edit
   def edit
+    @all_topics = Hash[Question.all.map {|question| [question.topic, question.topic]}]
+    @all_topics["new topic"]= "new topic"
     #javascript_include_tag('question.js')
   end
 
