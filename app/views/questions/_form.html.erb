@@ -87,19 +87,19 @@ $(document).ready(function initfunction()
   <% end %>
 
   <%= javascript_include_tag('question.js') %>
-  
-  <p><b> Note </b>: Mathematical equations written in LaTeX must be delimitted by \(...\)</p>
-  <!--script type="text/javascript">
-  function myFunction1(){
-    alert("hhh");
+  <script type="text/javascript">
+  // function myFunction1(){
+  //   alert("hhh");
     // var elem1 = document.getElementById("question_topic");
     // var hiddenDiv6 = document.getElementById("newtopic");
     // hiddenDiv6.style.display = (elem1.value == "new topic") ? "block":"none";
   }
   </script>
+  <p><b> Note </b>: Mathematical equations written in LaTeX must be delimitted by \(...\)</p>
+  
   <div class="topic">
     <%= form.label :topic %>
-    <!--%= form.select :topic, options_for_select(@all_topics, :selected => "General"), {:onchange => "if (this.selectedIndex) myFunction1();", :onload => "initfunction();"}, id: :question_topic %>
+    <%= form.select :topic, options_for_select(@all_topics, :selected => "General"), {:onchange => "if (this.selectedIndex) myFunction1();", :onload => "initfunction();"}, id: :question_topic %>
   </div>
   <div  id="newtopic" style="display:block" class="field">
     <%= form.label :newtopic  %>
