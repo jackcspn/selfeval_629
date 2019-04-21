@@ -78,7 +78,7 @@ $(document).ready(function initfunction()
   <% if current_user.admin? %>
     <div class="actions" >
       <%= form.label :display, 'Approved' %>
-      <%= form.select :display, options_for_select({"Yes" => "Yes", "No" => "No"}, :selected => "No"), {:onchange => "if (this.selectedIndex) myFunction();", :onload => "initfunction();"}, id: :question_display %>
+      <%= form.select :display, options_for_select({"Yes" => "Yes", "No" => "No"}, :selected => "Yes"), {:onchange => "if (this.selectedIndex) myFunction();", :onload => "initfunction();"}, id: :question_display %>
     </div>
   <% end %>
 
