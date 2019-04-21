@@ -1,5 +1,5 @@
 var elem = document.getElementById("question_qtype");
-// var elem1 = document.getElementById("question_topic");
+var elem1 = document.getElementById("question_topic");
 elem.onchange = function myFunction(){
     console.log(elem.value);
     var hiddenDiv1 = document.getElementById("opt1");
@@ -41,11 +41,11 @@ elem.onchange = function myFunction(){
     }
     //console.log(r1)
 };
-// elem1.onchange = function myFunction1(){
+elem1.onchange = function myFunction1(){
 //     console.log(elem.value)
-//     var hiddenDiv6 = document.getElementById("newtopic");
-//     hiddenDiv6.style.display = (this.value == "new topic") ? "block":"none";
-// };
+    var hiddenDiv6 = document.getElementById("newtopic");
+    hiddenDiv6.style.display = (this.value == "new topic") ? "block":"none";
+};
 // function myFunction1(){
 //     var elem1 = document.getElementById("question_topic");
 //     var hiddenDiv6 = document.getElementById("newtopic");
