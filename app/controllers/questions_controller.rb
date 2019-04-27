@@ -15,6 +15,9 @@ class QuestionsController < ApplicationController
     else
       @questions = Question.where(uid: @user_id)
     end
+    # @questions.each do |question|
+    #   puts question.image_url
+    # end
     # puts("questions count")
     # puts(@questions.size)
     # puts(@questions[1])
