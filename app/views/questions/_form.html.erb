@@ -93,7 +93,7 @@ $(document).ready(function initfunction()
   
   <div class="topic">
     <%= form.label :topic %>
-    <%= form.select :topic, options_for_select(@all_topics, :selected => "General"), {:onchange => "if (this.selectedIndex) myFunction1();", :onload => "initfunction();"}, id: :question_topic %>
+    <%= form.select :topic, options_for_select(@all_topics, :selected => @question.topic), {:onchange => "if (this.selectedIndex) myFunction1();", :onload => "initfunction();"}, id: :question_topic %>
   </div>
   
   <div  id="newtopic" style="display:block" class="field">
