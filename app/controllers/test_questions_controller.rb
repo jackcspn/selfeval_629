@@ -5,9 +5,9 @@ class TestQuestionsController < ApplicationController
     @show_resume = false
     # @questions = Question.all
     @questions = Question.where(display: [true, nil])
-    @questions.each do |question|
-      puts question.image_url
-    end
+    # @questions.each do |question|
+    #   puts question.image_url
+    # end
     @OK = params[:ok]
     @correctness = Hash[@questions.map {|question| [question.id, ""]}]
     @answers = Hash[@questions.map {|question| [question.id, "blank"]}]
