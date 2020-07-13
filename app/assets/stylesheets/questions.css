@@ -19,9 +19,11 @@
 }
 
 #option4{
+    display:block;
+}
+#newtopic{
     display:none;
 }
-
 #question_type{
     width:30px;   
 }
@@ -79,14 +81,30 @@
     background-color: red;
 }
 
+#approve{
+    text-decoration: underline;
+    font-size: large;
+}
+
 #show{
     text-decoration: underline;
+    font-size: large;
 }
 
 #edit{
     text-decoration: underline;
+    font-size: large;
 }
 
 #destroy{
     text-decoration: underline;
+    font-size: large;
+}
+
+table{
+    vertical-align: middle;
+}
+
+#action{
+    vertical-align: middle;
 }
